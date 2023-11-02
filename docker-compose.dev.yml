@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  mailcatcher:
+    restart: on-failure
+    image: dockage/mailcatcher:0.9.0
+    ports:
+    - "1080:1080"
+    - "1025:1025"
+networks:
+  network:
+    name: api_network
+    external: true
